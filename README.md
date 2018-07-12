@@ -15,3 +15,9 @@
 >    > * 实现功能之前先理解、分析需求，划分组件。并且掌握划分组件的基本原则——可复用性、可维护性。
 >    > * 受控组件的概念，React.js 中的 input  、textarea 、select  等元素的 value 值如果是受到 React.js 的控制，那么就是受控组件。
 >    > * 组件之间使用 props 通过父元素传递数据的技巧。
+> 5. **挂载阶段的组件生命周期**
+>    > * React.js 将组件渲染，并且构造 DOM 元素然后塞入页面的过程称为组件的 ***挂载*** 。
+>    > * ***componentWillMount*** ：组件挂载开始之前，也就是在组件调用 render 方法之前调用。
+>    > * ***componentDidMount*** ：组件挂载完成以后，也就是 DOM 元素已经插入页面后调用。
+>    > * ***componentWillUnmount*** ：组件对应的 DOM 元素从页面中删除之前调用。
+>    > * 我们一般会把组件的 state 的初始化工作放在 ***constructor*** 里面去做；在 ***componentWillMount*** 进行组件的启动工作，例如 Ajax 数据拉取、定时器的启动；组件从页面上销毁的时候，有时候需要一些数据的清理，例如定时器的清理，就会放在 ***componentWillUnmount*** 里面去做。
