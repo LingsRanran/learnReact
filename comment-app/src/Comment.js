@@ -1,6 +1,26 @@
 import React , {Component} from 'react';
+import PropType from 'prop-types';
 
 class Comment extends Component{
+    static propTypes = {
+        comment : PropType.object.isRuqired
+    }
+
+    constructor(){
+        super();
+        this.state = {
+            timeString : ''
+        }
+    }
+
+    componentWillMount(){
+        this._updateTimeString();
+    }
+
+    _updateTimeString(){
+
+    }
+
     render(){
         return (
             <div className='comment'>

@@ -7,7 +7,7 @@
  * @Email: ranran0036@163.com
  * @GitHub: github.com/LingsRanran
  */
-import React , {Component} from 'react';
+import React  from 'react';
 import ReactDOM from 'react-dom';
 import CommentApp from './CommentApp'
 import './index.css';
