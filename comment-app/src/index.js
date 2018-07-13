@@ -13,6 +13,7 @@ import CommentApp from './CommentApp'
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
+//PercentageApp
 /* class Input extends Component{
     constructor(){
         super();
@@ -88,12 +89,15 @@ ReactDOM.render(
     <PercentageApp />,
     document.getElementById('root')
 ) */
-/* ReactDOM.render(
+
+//CommentApp
+ReactDOM.render(
     <CommentApp />,
     document.getElementById('root')
-) */
+)
 
-class Clock extends Component{
+//ClockApp
+/* class Clock extends Component{
     constructor(){
         super();
         this.state = {
@@ -125,7 +129,7 @@ class Clock extends Component{
     }
 }
 
-class Index extends Component{
+class ClockApp extends Component{
     constructor(){
         super();
         this.state = {
@@ -150,8 +154,40 @@ class Index extends Component{
 }
 
 ReactDOM.render(
-    <Index />,
+    <ClockApp />,
     document.getElementById('root')
-)
+) */
+
+//focusInput  ref
+/* class AotuFocusInput extends Component{
+    componentDidMount(){
+        this.input.focus();
+    }
+
+    render(){
+        return (
+            <input type="text" ref={(input) => {
+                this.input = input
+            }} />
+        )
+    }
+}
+
+ReactDOM.render(
+    <AotuFocusInput />,
+    document.getElementById('root')
+) */
+
+/* class Comment extends Component{
+    static propTypes = {
+        comment : PropsType.object.isRequired,
+    }
+
+    render(){
+        return (
+            <div></div>
+        )
+    }
+} */
 
 registerServiceWorker();

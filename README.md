@@ -21,3 +21,12 @@
 >    > * ***componentDidMount*** ：组件挂载完成以后，也就是 DOM 元素已经插入页面后调用。
 >    > * ***componentWillUnmount*** ：组件对应的 DOM 元素从页面中删除之前调用。
 >    > * 我们一般会把组件的 state 的初始化工作放在 ***constructor*** 里面去做；在 ***componentWillMount*** 进行组件的启动工作，例如 Ajax 数据拉取、定时器的启动；组件从页面上销毁的时候，有时候需要一些数据的清理，例如定时器的清理，就会放在 ***componentWillUnmount*** 里面去做。
+> 6. **更新阶段的组件生命周期**
+>    > * ***shouldComponentUpdate(nextProps, nextState)*** ：你可以通过这个方法控制组件是否重新渲染。如果返回 false 组件就不会重新渲染。这个生命周期在 React.js 性能优化上非常有用。
+>    > * ***componentWillReceiveProps(nextProps)*** ：组件从父组件接收到新的 props 之前调用。
+>    > * ***componentWillUpdate()*** ：组件开始重新渲染之前调用。
+>    > * ***componentDidUpdate()*** ：组件重新渲染并且把更改变更到真实的 DOM 以后调用。
+> 7. **ref 和 React.js 中的 DOM 操作**
+>    > * 可以给任意代表 HTML 元素标签加上 ref 从而获取到它 DOM 元素然后调用 DOM API。但是记住一个原则：***能不用 ref 就不用***。
+> 8. **props.children 和容器类组件**
+>    > * 使用自定义组件的时候，可以在其中嵌套 JSX 结构。嵌套的结构在组件内部都可以通过 ***props.children*** 获取到，这种组件编写方式在编写容器类型的组件当中非常有用。
