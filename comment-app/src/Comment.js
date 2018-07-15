@@ -32,6 +32,16 @@ class Comment extends Component{
         })
     }
 
+    _getProcessedContent(content){
+        return content
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;")
+            .replace(/`([\S\s]+?)`/g, '<code>$1</code>')
+    }
+
     handleDeleteComment(){
         if(this.props.onDeleteComment){
             this.props.onDeleteComment(this.props.index)
@@ -45,7 +55,7 @@ class Comment extends Component{
                     <span>{this.props.comment.userName}</span> &nbsp;: &nbsp;
                 </div>
                 <p dangerouslySetInnerHTML={{
-                    __html : this.getProcessedContent(this.props.comment.content)
+                    __html : this._getProcessedContent(this.props.comment.content)
                 }} />
                 <span className='comment-createdtime'>
                     {this.state.timeString}
