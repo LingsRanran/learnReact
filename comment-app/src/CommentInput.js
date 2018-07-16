@@ -74,9 +74,9 @@ class CommentInput extends Component{
                     <span className='comment-field-name'>用户名：</span>
                     <div className='comment-field-input'>
                         <input 
-                            value={this.state.userName} 
-                            onBlur={this.handleUsernameBlur.bind(this)}
-                            onChange={this.handleUsernameChange.bind(this)} 
+                            value = {this.state.userName} 
+                            onBlur = {this.handleUsernameBlur.bind(this)}
+                            onChange = {this.handleUsernameChange.bind(this)} 
                         />
                     </div>
                 </div>
