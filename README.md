@@ -45,3 +45,7 @@
 >    > 7. `render*` 开头的方法，有时候 `render()` 方法里面的内容会分开到不同函数里面进行，这些函数都以 `render*` 开头。
 >    > 8. `render()` 方法。
 > 12. **Redux**
+>    > 1. FLUX
+>    >    > 1. Dispatcher
+>    >    >    > Dispatcher存在的作用，就是用来派发 action，接下来我们就来定义应用中涉及的 action。
+>    >    > 2. action
