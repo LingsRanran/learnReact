@@ -49,3 +49,4 @@
 >    >    > 1. Dispatcher
 >    >    >    > Dispatcher存在的作用，就是用来派发 action，接下来我们就来定义应用中涉及的 action。
 >    >    > 2. action
+>    >    >    > action 顾名思义代表一个“动作”，不过这个动作只是一个普通的 JavaScript 对象，代 表一个动作的纯数据。
